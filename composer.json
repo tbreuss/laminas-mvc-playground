@@ -27,7 +27,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "ApplicationTest\\": "module/Application/test/",
+            "AlbumTest\\": "module/Album/test/"
         }
     },
     "scripts": {
@@ -54,5 +55,9 @@
         "development-status": "Detail whether or not the application is in development mode.",
         "serve": "Start the built-in PHP web server and serve the application.",
         "test": "Run unit tests."
+    },
+    "require-dev": {
+        "laminas/laminas-test": "^3.5",
+        "phpunit/phpunit": "^9.5"
     }
 }
