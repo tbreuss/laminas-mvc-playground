@@ -1,7 +1,11 @@
 <?php
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * @var Album\Model\Album $album
+ */
 
 $title = 'Delete album';
-$url   = $this->url('album', ['action' => 'delete', 'id' => $id]);
+$url   = $this->url('album', ['action' => 'delete', 'id' => $album->id]);
 
 $this->headTitle($title);
 ?>
