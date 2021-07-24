@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Application;
 
-use Album\Controller\AlbumController;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
@@ -17,7 +16,7 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => AlbumController::class,
+                        'controller' => Controller\IndexController::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -53,6 +52,35 @@ return [
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',
+        ],
+    ],
+    'navigation' => [
+        'default' => [
+            [
+                'label' => 'Home',
+                'route' => 'home',
+            ],
+            [
+                'label' => 'Album',
+                'route' => 'album',
+                'pages' => [
+                    [
+                        'label'  => 'Add',
+                        'route'  => 'album',
+                        'action' => 'add',
+                    ],
+                    [
+                        'label'  => 'Edit',
+                        'route'  => 'album',
+                        'action' => 'edit',
+                    ],
+                    [
+                        'label'  => 'Delete',
+                        'route'  => 'album',
+                        'action' => 'delete',
+                    ],
+                ],
+            ],
         ],
     ],
 ];
