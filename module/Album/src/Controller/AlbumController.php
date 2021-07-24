@@ -115,7 +115,6 @@ class AlbumController extends AbstractActionController
         }
 
         return [
-            'id'    => $id,
             'album' => $this->table->getAlbum($id),
         ];
     }
