@@ -6,6 +6,7 @@
  * This should be an array of module namespaces used in the application.
  */
 return [
+    'Laminas\Paginator',
     'Laminas\Navigation',
     'Laminas\I18n',
     'Laminas\Hydrator',
