@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Album\Controller;
 
 use Album\Form\AlbumForm;
