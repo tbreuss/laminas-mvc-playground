@@ -6,12 +6,12 @@
                 <li class="page-item">
                     <a class="page-link"
                        href="<?= $this->url($this->route, [], ['query' => ['page' => $this->previous]]) ?>">
-                        Previous
+                        <?= $this->translate('Previous') ?>
                     </a>
                 </li>
             <?php else: ?>
                 <li class="page-item disabled">
-                    <span class="page-link">Previous</span>
+                    <span class="page-link"><?= $this->translate('Previous') ?></span>
                 </li>
             <?php endif ?>
 
@@ -36,12 +36,12 @@
                 <li class="page-item">
                     <a class="page-link"
                        href="<?= $this->url($this->route, [], ['query' => ['page' => $this->next]]) ?>">
-                        Next
+                        <?= $this->translate('Next') ?>
                     </a>
                 </li>
             <?php else: ?>
                 <li class="page-item disabled">
-                    <span class="page-link">Next</span>
+                    <span class="page-link"><?= $this->translate('Next') ?></span>
                 </li>
             <?php endif ?>
         </ul>

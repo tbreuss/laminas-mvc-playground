@@ -4,7 +4,7 @@
  * @var Album\Model\Album $album
  */
 
-$title = 'Delete album';
+$title = $this->translate('Delete album');
 $url   = $this->url('album', ['action' => 'delete', 'id' => $album->id]);
 
 $this->headTitle($title);
@@ -12,15 +12,15 @@ $this->headTitle($title);
 <h1><?= $this->escapeHtml($title) ?></h1>
 
 <p>
-    Are you sure that you want to delete
-    "<?= $this->escapeHtml($album->title) ?>" by
+    <?= $this->translate('Are you sure that you want to delete') ?>:
+    "<?= $this->escapeHtml($album->title) ?>" <?= $this->translate('by') ?>
     "<?= $this->escapeHtml($album->artist) ?>"?
 </p>
 
 <form action="<?= $url ?>" method="post">
     <div class="form-group">
         <input type="hidden" name="id" value="<?= (int) $album->id ?>" />
-        <input type="submit" class="btn btn-danger" name="del" value="Yes" />
-        <input type="submit" class="btn btn-success" name="del" value="No" />
+        <input type="submit" class="btn btn-danger" name="del" value="<?= $this->translate('yes') ?>" />
+        <input type="submit" class="btn btn-success" name="del" value="<?= $this->translate('no') ?>" />
     </div>
 </form>

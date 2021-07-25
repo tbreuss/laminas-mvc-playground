@@ -17,4 +17,14 @@ return [
         'driver' => 'Pdo',
         'dsn'    => sprintf('sqlite:%s/data/database.db', realpath(getcwd())),
     ],
+    'translator' => [
+        'locale' => 'de_DE',
+        'translation_file_patterns' => [
+            [
+                'type'     => 'phparray',
+                'base_dir' => getcwd() .  '/data/language',
+                'pattern'  => '%s.php',
+            ],
+        ],
+    ],
 ];
