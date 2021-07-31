@@ -3,12 +3,13 @@
         <?php
         // iterate through the pages
         foreach ($this->pages as $key => $page): ?>
+            <?php $attribs = $page->get('attribs'); ?>
             <?php
             // if this isn't the last page, add a link and the separator:
             if ($key < count($this->pages) - 1):
                 ?>
                 <li class="breadcrumb-item">
-                    <a href="<?= $page->getHref() ?>">
+                    <a href="<?= $page->getHref() ?>" <?= join(' ', $attribs) ?>>
                         <?= $page->getLabel() ?>
                     </a>
                 </li>

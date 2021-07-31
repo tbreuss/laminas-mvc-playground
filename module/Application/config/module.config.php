@@ -59,10 +59,12 @@ return [
             [
                 'label' => 'Home',
                 'route' => 'home',
+                'attribs' => ['up-follow'],
             ],
             [
                 'label' => 'Album',
                 'route' => 'album',
+                'attribs' => ['up-follow'],
                 'pages' => [
                     [
                         'label'  => 'Add',

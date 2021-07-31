@@ -25,8 +25,11 @@ $submit->setAttribute('class', 'btn btn-primary');
 $form->setAttribute('action', $this->url('album', ['action' => 'add']));
 $form->prepare();
 
-echo $this->form()->openTag($form);
+$form->setAttribute('up-target', 'x');
+
+#echo $this->form()->openTag($form);
 ?>
+<form method="POST" name="album" action="/album/add" id="album" up-submit>
 <?php // Wrap the elements in divs marked as form groups, and render the
 // label, element, and errors separately within ?>
     <div class="form-group">

@@ -26,6 +26,8 @@
 
         <!-- Scripts -->
         <?= $this->headScript() ?>
+        <script src="https://unpkg.com/unpoly@2.1.0/unpoly.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/unpoly@2.1.0/unpoly.min.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark mb-4" role="navigation">
@@ -60,7 +62,9 @@
                 ->breadcrumbs()
                 ->setMinDepth(0)
                 ->setPartial('partial/breadcrumb') ?>
-            <?= $this->content ?>
+            <div up-main>
+                <?= $this->content ?>
+            </div>
             <hr>
             <footer>
                 <p>
