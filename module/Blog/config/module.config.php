@@ -8,9 +8,17 @@ use Laminas\Router\Http\Literal;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
+    'service_manager' => [
+        'aliases' => [
+            Model\PostRepositoryInterface::class => Model\PostRepository::class,
+        ],
+        'factories' => [
+            Model\PostRepository::class => InvokableFactory::class,
+        ],
+    ],
     'controllers' => [
         'factories' => [
-            Controller\ListController::class => InvokableFactory::class,
+            Controller\ListController::class => Factory\ListControllerFactory::class,
         ],
     ],
     // This lines opens the configuration for the RouteManager
